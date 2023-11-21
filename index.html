@@ -30,6 +30,7 @@
             text-decoration: none;
             padding: 10px;
             margin: 0 10px;
+            cursor: pointer;
         }
 
         section {
@@ -50,7 +51,60 @@
     </header>
 
     <nav>
-        <a href="#inicio">Início</a>
-        <a href="#futebol">Futebol</a>
-        <a href="#basquete">Basquete</a>
-        <a href="#tenis">
+        <a onclick="scrollToSection('inicio')">Início</a>
+        <a onclick="scrollToSection('futebol')">Futebol</a>
+        <a onclick="scrollToSection('basquete')">Basquete</a>
+        <a onclick="scrollToSection('tenis')">Tênis</a>
+        <a onclick="scrollToSection('noticias')">Notícias</a>
+        <a onclick="scrollToSection('equipes')">Equipes</a>
+        <a onclick="scrollToSection('contato')">Contato</a>
+    </nav>
+
+    <section id="inicio">
+        <h2>Bem-vindo ao Meu Site de Esportes!</h2>
+        <p>Encontre as últimas notícias e informações sobre diversos esportes.</p>
+    </section>
+
+    <section id="futebol">
+        <h2>Futebol</h2>
+        <p>Notícias, resultados e destaques do mundo do futebol.</p>
+    </section>
+
+    <section id="basquete">
+        <h2>Basquete</h2>
+        <p>Informações sobre equipes, jogadores e partidas de basquete.</p>
+    </section>
+
+    <section id="tenis">
+        <h2>Tênis</h2>
+        <p>Atualizações e análises sobre o mundo do tênis.</p>
+    </section>
+
+    <section id="noticias">
+        <h2>Notícias de Esportes</h2>
+        <p>Fique por dentro das últimas notícias e eventos esportivos.</p>
+    </section>
+
+    <section id="equipes">
+        <h2>Equipes Destacadas</h2>
+        <p>Conheça as equipes que estão se destacando atualmente.</p>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
+        <p>Email: contato@meusite.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Meu Site de Esportes. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
